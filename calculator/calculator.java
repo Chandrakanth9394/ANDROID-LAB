@@ -1,15 +1,15 @@
-ewpackage com.example.calculator;
+package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     private EditText e1,e2;
     private Button a,s,m,d,c;
     private TextView t;
@@ -25,68 +25,53 @@ public class MainActivity extends AppCompatActivity {
         s=(Button) findViewById(R.id.sub);
         m=(Button) findViewById(R.id.mul);
         d=(Button) findViewById(R.id.div);
-        c=(Button) findViewById(R.id.clr);
-        t=(TextView) findViewById(R.id.res);
+        c=(Button) findViewById(R.id.clear);
+        t=(TextView) findViewById(R.id.result);
 
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                int num1 =Integer.parseInt(e1.getText().toString());
-                int num2 =Integer.parseInt(e2.getText().toString());
-                int sum=num1+num2;
+                int num1=Integer.parseInt(e1.getText().toString());
+                int num2=Integer.parseInt(e2.getText().toString());
+                int sum =num1+num2;
                 t.setText(Integer.toString(sum));
-
             }
         });
-
         s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                int num1 =Integer.parseInt(e1.getText().toString());
-                int num2 =Integer.parseInt(e2.getText().toString());
-                int diff=num1-num2;
+                int num1=Integer.parseInt(e1.getText().toString());
+                int num2=Integer.parseInt(e2.getText().toString());
+                int diff =num1-num2;
                 t.setText(Integer.toString(diff));
-
             }
         });
-
         m.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                int num1 =Integer.parseInt(e1.getText().toString());
-                int num2 =Integer.parseInt(e2.getText().toString());
-                int sum=num1*num2;
+                int num1=Integer.parseInt(e1.getText().toString());
+                int num2=Integer.parseInt(e2.getText().toString());
+                int sum =num1*num2;
                 t.setText(Integer.toString(sum));
-
             }
         });
 
         d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                int num1 =Integer.parseInt(e1.getText().toString());
-                int num2 =Integer.parseInt(e2.getText().toString());
-                int sum=num1/num2;
+                int num1=Integer.parseInt(e1.getText().toString());
+                int num2=Integer.parseInt(e2.getText().toString());
+                int sum =num1/num2;
                 t.setText(Integer.toString(sum));
-
             }
         });
-
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 t.setText("");
                 e1.setText("");
                 e2.setText("");
-
-
             }
         });
-
     }
 }

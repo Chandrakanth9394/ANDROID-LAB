@@ -1,0 +1,16 @@
+Step 1: Create a New Android Studio Project
+
+Step 2: Adding a dependency to the project
+project->.app->build.gradle paste the code -> implementation 'com.google.android.material:material:1.3.0-alpha03'
+
+Step 3: Creating a menu in the menu folder
+open resource folder res->new->Android resource Directory -> change resource type to menu
+again create a xml file on folder menu ->menu resource type as navigation_menu 
+
+Step 4: Working with the activity_main.xml File
+
+Step 5: Include the Open Close strings in the string.xml 
+
+Step 6: Working with the MainActivity File
+
+source- geeksforgeeks
